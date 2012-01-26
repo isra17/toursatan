@@ -1,0 +1,5 @@
+Hero
+{
+	Type Sprite
+	ImgSrc "data/image/hero.png"
+}

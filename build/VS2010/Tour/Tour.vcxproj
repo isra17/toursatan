@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F6E7DC0-6E60-492B-AAD8-BAF96B64C800}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Tour</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SFML_HOME_16)\include;$(BOOST_HOME_144);$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\..\..\bin\</OutDir>
+    <LibraryPath>$(BOOST_HOME_144)\lib;$(SFML_HOME_16)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SFML_HOME_16)\include;$(BOOST_HOME_144);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_HOME_144)\lib;$(SFML_HOME_16)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_WIN32_WINNT=0x0501;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_WIN32_WINNT=0x0501;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\Engine\CClientGameEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\CGameEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\CPlayer.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\CServerGameEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\CEntityList.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CDebris.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CDemon.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CFireBall.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CHero.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CPlateform.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CPofin.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\GameEntity\CSatan.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Entity\IEntity.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\CEventEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\CEventFactory.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\GameEvent\HeroEvent.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\GameEvent\NetworkEvent.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\Network\CClientEventEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\Network\CClientSession.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\Network\CServerClientSession.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\Network\CServerEventEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Event\Network\CServerSession.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Graphics\CAnim.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Graphics\CImgAnim.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Graphics\CRenderEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Graphics\Model\CAnimModel.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Input\CInputEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Level\CLevel.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Level\CLevelLoader.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Log\CConsoleLog.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Log\CLog.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Log\CSFMLLog.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Misc\CClock.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Resource\CImageResManager.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Resource\CModelFactory.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\Resource\CResourceEngine.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\State\CGameLostState.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\State\CPlayGameState.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\State\CStartGameState.cpp" />
+    <ClCompile Include="..\..\..\src\Engine\State\CGameWonState.cpp" />
+    <ClCompile Include="..\..\..\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\Engine\CClientGameEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\CGameEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\CPlayer.h" />
+    <ClInclude Include="..\..\..\src\Engine\CServerGameEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\CBaseHandle.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\CEntityList.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\CHandle.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\Entity.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CDebris.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CDemon.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CFireBall.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CHero.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CPlateform.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CPofin.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\GameEntity\CSatan.h" />
+    <ClInclude Include="..\..\..\src\Engine\Entity\IEntity.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\CEvent.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\CEventEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\CEventFactory.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\CMsgEvent.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\EventID.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\GameEvent\CMoveTestEvent.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\GameEvent\EntityEvent.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\GameEvent\HeroEvent.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\GameEvent\NetworkEvent.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\CClientEventEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\CClientSession.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\CConnection.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\CServerClientSession.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\CServerEventEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\CServerSession.h" />
+    <ClInclude Include="..\..\..\src\Engine\Event\Network\INetworkSession.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\CAnim.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\CImgAnim.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\CRenderEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\Model\CAnimModel.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\Model\CNoModel.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\Model\CRectModel.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\Model\CSpriteModel.h" />
+    <ClInclude Include="..\..\..\src\Engine\Graphics\Model\IModel.h" />
+    <ClInclude Include="..\..\..\src\Engine\Input\CInputEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\Level\CLevel.h" />
+    <ClInclude Include="..\..\..\src\Engine\Level\CLevelLoader.h" />
+    <ClInclude Include="..\..\..\src\Engine\Log\CConsoleLog.h" />
+    <ClInclude Include="..\..\..\src\Engine\Log\CLog.h" />
+    <ClInclude Include="..\..\..\src\Engine\Log\CSFMLLog.h" />
+    <ClInclude Include="..\..\..\src\Engine\Misc\BasicType.h" />
+    <ClInclude Include="..\..\..\src\Engine\Misc\CClock.h" />
+    <ClInclude Include="..\..\..\src\Engine\Misc\CTourException.h" />
+    <ClInclude Include="..\..\..\src\Engine\Misc\Math.h" />
+    <ClInclude Include="..\..\..\src\Engine\Resource\CImageResManager.h" />
+    <ClInclude Include="..\..\..\src\Engine\Resource\CModelFactory.h" />
+    <ClInclude Include="..\..\..\src\Engine\Resource\CResManager.h" />
+    <ClInclude Include="..\..\..\src\Engine\Resource\CResourceEngine.h" />
+    <ClInclude Include="..\..\..\src\Engine\State\CGameLostState.h" />
+    <ClInclude Include="..\..\..\src\Engine\State\CPlayGameState.h" />
+    <ClInclude Include="..\..\..\src\Engine\State\CStartGameState.h" />
+    <ClInclude Include="..\..\..\src\Engine\State\CGameWonState.h" />
+    <ClInclude Include="..\..\..\src\Engine\State\IState.h" />
+    <ClInclude Include="..\..\..\src\Engine\Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\bin\data\models.info" />
+    <None Include="..\..\..\bin\data\test_level.info" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

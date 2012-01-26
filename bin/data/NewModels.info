@@ -1,0 +1,443 @@
+Hero
+{
+	ImgSrc "data/image/hero1.png"
+	ModelType Anim
+	NbrRow 7
+	MaxLine 2
+	Frames
+	{
+		StandRight
+		{
+			Type Sprite
+			Offset
+			{
+				x 0
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		RunRight
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.15
+			Offset
+			{
+				x 50
+				y 0
+			}
+		}
+		JumpRight
+		{
+			Type Sprite
+			Offset
+			{
+				x 100
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		StandLeft
+		{
+			Type Sprite
+			Offset
+			{
+				x 150
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		RunLeft
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.15
+			Offset
+			{
+				x 200
+				y 0
+			}
+		}
+		JumpLeft
+		{
+			Type Sprite
+			Offset
+			{
+				x 250
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		Hurt
+		{
+			Type Sprite
+			Offset
+			{
+				x 300
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 70
+			}
+		}
+	}
+}
+Hero2
+{
+	ImgSrc "data/image/hero2.png"
+	ModelType Anim
+	NbrRow 7
+	MaxLine 2
+	Frames
+	{
+		StandRight
+		{
+			Type Sprite
+			Offset
+			{
+				x 0
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		RunRight
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.15
+			Offset
+			{
+				x 50
+				y 0
+			}
+		}
+		JumpRight
+		{
+			Type Sprite
+			Offset
+			{
+				x 100
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		StandLeft
+		{
+			Type Sprite
+			Offset
+			{
+				x 150
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		RunLeft
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.15
+			Offset
+			{
+				x 200
+				y 0
+			}
+		}
+		JumpLeft
+		{
+			Type Sprite
+			Offset
+			{
+				x 250
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 90
+			}
+		}
+		Hurt
+		{
+			Type Sprite
+			Offset
+			{
+				x 300
+				y 0
+			}
+			Size
+			{
+				x 50
+				y 70
+			}
+		}
+	}
+}
+Pofin
+{
+	ImgSrc "data/image/pofin.png"
+	ModelType Anim
+	NbrRow 2
+	MaxLine 2
+	Frames
+	{
+		RunRight
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.1
+			Offset
+			{
+				x 0
+				y 0
+			}
+		}
+		RunLeft
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.1
+			Offset
+			{
+				x 50
+				y 0
+			}		
+		}
+	}
+}
+FireBall
+{
+	ImgSrc "data/image/fireball.png"
+	ModelType Anim
+	NbrRow 1
+	MaxLine 3
+	Frames
+	{
+		Thrown
+		{
+			Type Anim
+			NbrFrame 3
+			TimeDelay 0.1
+			Offset
+			{
+				x 0
+				y 0
+			}
+		}
+	}
+}
+Demon
+{
+	ImgSrc "data/image/demon.png"
+	ModelType Anim
+	NbrRow 4
+	MaxLine 3
+	Frames
+	{
+		ShootLeft
+		{
+			Type Anim
+			NbrFrame 3
+			TimeDelay 0.1
+			Offset
+			{
+				x 0
+				y 0
+			}
+		}
+		StandLeft
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.1
+			Offset
+			{
+				x 50
+				y 0
+			}
+		}
+		StandRight
+		{
+			Type Anim
+			NbrFrame 2
+			TimeDelay 0.1
+			Offset
+			{
+				x 100
+				y 0
+			}
+		}
+		ShootRight
+		{
+			Type Anim
+			NbrFrame 3
+			TimeDelay 0.1
+			Offset
+			{
+				x 150
+				y 0
+			}
+		}
+	}
+}
+Satan
+{
+	ImgSrc "data/image/satan.png"
+	ModelType Anim
+	NbrRow 1
+	MaxLine 4
+	Frames
+	{
+		Fly
+		{
+			Type Anim
+			NbrFrame 4
+			TimeDelay 0.1
+			Offset
+			{
+				x 0
+				y 0
+			}
+		}
+	}
+}
+Debris
+{
+	ImgSrc "data/image/debris.png"
+	ModelType Sprite
+	Offset
+	{
+		x 0
+		y 0
+	}		
+}
+Coin
+{
+	ImgSrc "data/image/coin.png"
+	ModelType Sprite
+	Offset
+	{
+		x 0
+		y 0
+	}		
+}
+Block
+{
+	ImgSrc "data/image/block.png"
+	ModelType Block
+	CornerSize
+	{
+		x 20
+		y 20
+	}
+	CenterSize
+	{
+		x 260
+		y 20
+	}
+	Frames
+	{
+		CornerTopLeft
+		{
+			Offset
+			{
+				x 0
+				y 0
+			}
+		}
+		CornerTopRight
+		{
+			Offset
+			{
+				x 280
+				y 0
+			}
+		}
+		CornerBottomLeft
+		{
+			Offset
+			{
+				x 0
+				y 40
+			}
+		}
+		CornerBottomRight
+		{
+			Offset
+			{
+				x 280
+				y 40
+			}
+		}
+		SideTop
+		{
+			Offset
+			{
+				x 20
+				y 0
+			}
+		}
+		SideBottom
+		{
+			Offset
+			{
+				x 20
+				y 40
+			}
+		}
+		SideLeft
+		{
+			Offset
+			{
+				x 0
+				y 20
+			}
+		}
+		SideRight
+		{
+			Offset
+			{
+				x 280
+				y 20
+			}
+		}
+		Center
+		{
+			Offset
+			{
+				x 20
+				y 20
+			}
+		}
+	}
+
+}

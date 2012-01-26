@@ -1,0 +1,7 @@
+Score lorsque on tue un ennemie
+Bowser afficher devant
+
+
+
+Tâche hors projet
+Un unit test
